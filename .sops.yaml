@@ -1,0 +1,7 @@
+# 生成: mkpasswd -m sha-512
+# 加密: SOPS_AGE_KEY_FILE=/var/lib/sops-nix/keys.txt sops secrets/secrets.yaml
+creation_rules:
+  - path_regex: secrets[/\\][^/\\]+\.yaml$
+    key_groups:
+      - age:
+        - age1qf389vgdg03dfwc0jpdwdkudlrg3lqx8l3gaw2nrpaw33k0j33hqy4v46c
