@@ -7,6 +7,7 @@
 
 {
   imports = [
+    inputs.catppuccin.nixosModules.catppuccin
     inputs.disko.nixosModules.disko
 
     # ./device/hyperv.nix
@@ -54,21 +55,23 @@
 
   zramSwap.enable = true;
 
+  catppuccin.limine.enable = true;
+
   networking.networkmanager.enable = true;
 
   services.journald.extraConfig = "MaxRetentionSec=7day";
 
   time.timeZone = "Asia/Shanghai";
 
+  console = {
+    keyMap = "us";
+  };
+
   i18n = {
     defaultLocale = "zh_CN.UTF-8";
     extraLocales = [
       "en_US.UTF-8/UTF-8"
     ];
-  };
-
-  console = {
-    keyMap = "us";
   };
 
   system.stateVersion = "26.05";

@@ -5,19 +5,21 @@
 }:
 
 {
-  environment.systemPackages = with pkgs; [
-    zip
-    unzip
-    dnsmasq
-    fastfetch
-    nixfmt
-    wget
-  ];
+  environment = {
+    shellAliases = {
+      nf = "sudo nix flake update";
+      nb = "sudo nixos-rebuild boot --flake .#nixos";
+      ns = "sudo nixos-rebuild switch --flake .#nixos";
+      ng = "sudo nix-collect-garbage -d";
+    };
 
-  virtualisation = {
-    docker.enable = true;
-
-    libvirtd.enable = true;
+    systemPackages = with pkgs; [
+      zip
+      unzip
+      fastfetch
+      nixfmt
+      wget
+    ];
   };
 
   programs = {

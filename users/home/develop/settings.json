@@ -25,10 +25,10 @@
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Default Light Modern",
+  "workbench.colorTheme": "Light Modern",
   "workbench.iconTheme": "catppuccin-latte",
-  "workbench.preferredDarkColorTheme": "Default Dark Modern",
-  "workbench.preferredLightColorTheme": "Default Light Modern",
+  "workbench.preferredDarkColorTheme": "Dark Modern",
+  "workbench.preferredLightColorTheme": "Light Modern",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.enablePreview": false,
   "window.autoDetectColorScheme": true,
@@ -270,4 +270,3 @@
     "*.xaml": "$(capture).xaml.cs"
   }
 }
-

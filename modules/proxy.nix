@@ -5,10 +5,26 @@
 }:
 
 {
-  services.mihomo = {
+  networking = {
+    firewall = {
+      trustedInterfaces = [
+        "Mihomo"
+      ];
+
+      allowedTCPPorts = [
+        7890
+      ];
+      allowedUDPPorts = [
+        7890
+      ];
+
+      checkReversePath = "loose";
+    };
+  };
+
+  programs.clash-verge = {
     enable = true;
+    serviceMode = true;
     tunMode = true;
-    configFile = config.sops.secrets."proxy/mihomo".path;
-    webui = pkgs.metacubexd;
   };
 }

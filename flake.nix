@@ -16,6 +16,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    catppuccin = {
+      url = "github:catppuccin/nix/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     quickshell = {
       url = "github:quickshell-mirror/quickshell/master";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -11,10 +11,10 @@ let
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "docker"
-      "libvirtd"
       "greeter"
-      "uucp"
+      "libvirtd"
+      "dialout"
+      "docker"
       "i2c"
     ];
   };

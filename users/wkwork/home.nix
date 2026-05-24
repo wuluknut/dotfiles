@@ -8,12 +8,8 @@
 {
   imports = [
     ../home/chromium
-    ../home/codex
-    ../home/ghostty
-    ../home/jetbrains
+    ../home/develop
     ../home/niri
-    ../home/vscode
-    ../home/wallpaper
   ];
 
   home = {

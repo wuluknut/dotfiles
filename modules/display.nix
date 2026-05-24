@@ -64,8 +64,6 @@
       quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
     };
 
-    virt-manager.enable = true;
-
     dsearch.enable = true;
 
     niri.enable = true;

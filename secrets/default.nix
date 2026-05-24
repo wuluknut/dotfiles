@@ -14,10 +14,6 @@
     age.keyFile = "/var/lib/sops-nix/keys.txt";
     defaultSopsFile = ./secrets.yaml;
     secrets = {
-      "proxy/mihomo" = {
-        mode = "0600";
-      };
-
       "passwd/root".neededForUsers = true;
       "passwd/wkwork".neededForUsers = true;
       "passwd/wuluknut".neededForUsers = true;
