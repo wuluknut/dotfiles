@@ -55,7 +55,11 @@
 
   zramSwap.enable = true;
 
-  catppuccin.limine.enable = true;
+  catppuccin = {
+    enable = true;
+    autoEnable = false;
+    limine.enable = true;
+  };
 
   networking.networkmanager.enable = true;
 

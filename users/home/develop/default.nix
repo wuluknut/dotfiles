@@ -7,19 +7,20 @@
 
 {
   home.packages = with pkgs; [
+    maven
+    gradle
+
     jetbrains.idea
 
-    python3
-
-    gradle
-    maven
-
     nodejs_22
-    pnpm
+    pnpm_10
+
+    python3
   ];
 
   programs = {
-    claude-code.enable = true;
+    codex.enable = true;
+    opencode.enable = true;
 
     vscode = {
       enable = true;
